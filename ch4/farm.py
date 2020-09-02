@@ -10,4 +10,4 @@ length = 1680
 width = 640
 biggest_square_side = divide_to_squares(length, width)
 
-print(f"В наделе длиной {length}м и шириной {width}м будет {length * width / pow(biggest_square_side, 2)} квадратов со стороной {biggest_square_side}м")
+print(f"В наделе длиной {length}м и шириной {width}м будет {length * width / pow(biggest_square_side, 2)} квадратов со стороной {biggest_square_side}м") 
