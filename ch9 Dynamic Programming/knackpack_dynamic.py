@@ -71,8 +71,10 @@ def knackpack(items, pounds):
 
 def print_knackpack():
     global items
+    best_choice = {}
+    pounds = 4
 
-    cells = knackpack(items, 4)
+    cells = knackpack(items, pounds)
     items_keys = list(items.keys())
     i = 0
 
@@ -82,6 +84,15 @@ def print_knackpack():
             print(f"\t---col_{col}---")
             print(f"\t\t{cells[cell][col]}")
         i += 1
+
+        best_choice = cells[cell][col]
+    
+    print("\n\n\tIf you have to steal from the store that has:\n")
+    print(f"\t{', '.join(items_keys)}\n")
+    print(f"\tBest choice to put in your Backpack ({pounds} lbs) would be: ")
+    print(f"\t{', '.join(best_choice['items'])}")
+    print(f"\t{'-' * 20}")
+    print(f"\tTotal cost ${best_choice['cost']}\n")
 
 
 print_knackpack()
